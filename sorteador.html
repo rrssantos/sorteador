@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+ function Evento(){
+ 		var tipos = ["Ruim", "Bom"];
+        const tipoSorteado = Math.floor(Math.random() * tipos.length);
+        
+        var tipo = tipos[tipoSorteado];
+        let imageElement = document.getElementById("image");
+
+        if (tipo == "Bom"){
+         imageElement.src = "https://data.pixiz.com/output/user/frame/preview/api/big/6/1/9/0/1740916_8cb92.jpg"
+        }else {
+          imageElement.src = "https://4.bp.blogspot.com/-YVtxtPMCwdo/TXP110jvlyI/AAAAAAAAAEQ/5tkmUlRkoC0/s1600/homer%252Bsimpson.jpg";
+        }
+        imageElement.style.display = "block"
+   		document.getElementById("demo").innerHTML =  "Você deve levar algo: <br><br>" + tipo;   
+        document.getElementById("button").style.display = "none"
+            }
+    
+   
+</script>
+</head>
+<body>
+<H1>Eae Family, bora sortear o amigo ladrão ?</H1>
+
+
+<H2 id="demo"></H2>
+
+<img id="image" width="500" height="600" style="display:none">
+
+
+<button id="button" type="button" onclick="Evento()">Sortear</button>
+
+</body>
+</html>
